@@ -1,0 +1,149 @@
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --fs: 16px;
+    --font: 'Karla', sans-serif;
+    --title-weight: 700;
+    --text-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+    min-height: 100vh;
+    font-family: var(--font);
+    font-size: var(--fs);
+    font-weight: var(--text-weight);
+    display: flex;
+    place-content: center;
+    place-items: center;
+    background: var(--Light-Gray);
+    color: var(--Grayish-Blue);
+}
+
+header {
+    background: white;
+    grid-column: 1/-1;
+    padding: 1.5rem 3rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--Cyan);
+    line-height: 3.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: var(--title-weight);
+    color: var(--Bright-Yellow);
+}
+
+header .text {
+    line-height: 1.8rem;
+    color: var(--Grayish-Blue);
+    font-weight: var(--text-weight);
+}
+
+main {
+    min-width: max-content;
+    overflow: hidden;
+    border-radius: 10px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 20px var(--Grayish-Blue);
+}
+
+.left {
+    background: var(--Cyan);
+}
+
+pre {
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--Light-Gray);
+    line-height: 1.4;
+}
+
+.right {
+    background: hsl(179, 62%, 46%);
+}
+
+section {
+    padding: 2rem 2.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.price-div {
+    margin-top: -2rem;
+    margin-bottom: -2.5rem;
+    ;
+    display: flex;
+    place-content: flex-start;
+    place-items: center;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: var(--title-weight);
+}
+
+.price-text {
+    color: var(--Light-Gray);
+    font-weight: 100;
+}
+
+button {
+    background: var(--Bright-Yellow);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    font-weight: var(--title-weight);
+    padding-block: 1rem;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    box-shadow: 0 6px 30px -13px black;
+    transition: all 0.1s ease;
+}
+
+button:hover {
+    background: hsla(71, 73%, 54%, 0.8)
+}
+
+button:active {
+    background: hsl(71, 73%, 50%);
+    box-shadow: 0 0 0 0;
+    color: gray;
+}
+
+@media screen and (max-width : 500px) {
+    body {
+        min-width: 280px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        min-width: 100%;
+    }
+
+    header {
+        padding: 1.5rem
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
